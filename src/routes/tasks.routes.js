@@ -7,4 +7,13 @@ router.get('/', taskCtrl.findAllTasks);
 
 router.post('/', taskCtrl.createTask);
 
+router.get('/done', taskCtrl.findAllDoneTasks);
+
+// api/tasks/params (e.g.: id from mongodb)
+router.get('/:id', taskCtrl.findOneTask);
+
+router.delete('/:id', taskCtrl.deleteTask);
+
+router.put('/:id', taskCtrl.updateTask);
+
 export default router;
